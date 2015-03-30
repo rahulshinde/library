@@ -1,16 +1,107 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>Dribbble API Examples</title>
-		<link rel="stylesheet" href="css/site.css">
-	</head>
-
-	<body data-features="dribbble dropdown slideshow">
-		<div class="container" id="container">
-			
-		</div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> decker library </title>
+		<link rel="stylesheet" type="text/css" href="css/main-minified.css">
 		
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="js/site.js"></script>
+	</head>
+	<body data-features="accordion">
+    <div class="wrapper" id="wrapper1">
+      <img class="gradient index-gradient" src="img/bg.jpg">
+      <img class="background1" src="img/080070.jpg">
+      <div class="header">
+        <div class="title" id="title">
+          mica decker library
+        </div> <!-- end title -->
+        <div class="login gradient-box">
+          <a id ="link" href="#">login</a>
+        </div>
+        <div class="marquee">
+          <h2>the library is closing at 4pm today due to inclement weather --</h2> 
+        </div> <!-- end marquee -->
+        
+  
+      </div> <!-- end header -->
+  
+		  <div class="container">
+  
+        <div class "search-nav" id="search-nav">
+          <ul class="search-li">
+            <li class="gradient-box lib-link" id ="search"><a id ="link" href="search.html">search the catalog</a></li>
+            <li class="gradient-box lib-link" id ="research"><a id ="link" href="research-database.html">research databases</a></li>
+          </ul> <!-- end ul links -->
+        </div>
+  
+        <div class="static">
+  
+          <div class="staticbox">
+            <h3>library hours</h3>
+    
+            <table class="static-table">
+              <tr class="hour-no">
+                <td class="align-right">m-th:</td>
+                <td>0830-2100</td>
+              </tr>
+              <tr class="hour-no">
+                <td class="align-right">fri:</td>
+                <td>0830-1630</td>
+              </tr>
+              <tr class="hour-no">
+                <td class="align-right">sat-sun:</td>
+                <td>1200-1800</td>
+              </tr>
+            </table>
+          </div>
+  
+          <div class="staticbox">
+            <h3 class="static-name">account info</h3>
+            <table class="static-table">
+              <tr class="hour-no">
+                <td>log in to view <br> account info</td>
+              </tr>
+            </table>
+          </div>
+        </div> <!-- end hours -->
+  
+        <div class="quick-links">
+          <ul class="links-list">
+            <li class ="gradient-box lib-link" id="loan"><a id ="link" href="loan.html">interlibrary loan</a></li>
+            <li class ="gradient-box lib-link" id="exhibits"><a id ="link" href="#">exhibits</a></li>
+            <li class ="gradient-box lib-link" id="faq"><a id ="link" href="#">faq's</a></li>
+            <li class ="gradient-box lib-link" id="comments"><a id ="link" href="#">comments / suggestions</a></li>
+            <li class ="gradient-box lib-link" id="recommend"><a id ="link" href="#">recommend to purchase</a></li>
+            <li class ="gradient-box lib-link" id="resources"><a id ="link" href="#">resources</a></li>
+          </ul> <!-- end ul links -->
+          
+        </div>
+  
+        
+  
+      </div> <!-- container -->
+    </div> 
+		<!-- build:js scrips/site.js -->
+		<!-- bower:js  -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src='scripts/jquery.marquee.min.js'></script>
+		<!-- endbower -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.marquee').marquee({
+    				//speed in milliseconds of the marquee
+    				duration: 7000,
+    				//gap in pixels between the tickers
+    				gap: 8,
+    				//time in milliseconds before the marquee will start animating
+    				delayBeforeStart: 0,
+    				//'left' or 'right'
+    				direction: 'left',
+    				//true or false - should the marquee be duplicated to show an effect of continues flow
+    				duplicated: true
+				});
+			});
+			
+		</script>
+		<!-- endbuild -->
 	</body>
-
 </html>
